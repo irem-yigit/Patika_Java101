@@ -7,12 +7,14 @@ public class Course {
     String code;
     String prefix;     //örneğin tarih dersine matematik eklenmemesi için, prefix ile branch'in aynı olmasını bekleyeceğim.
     int note;
+    int verbalNote;        // verbal: sözlü notu
 
     Course(String name, String code, String prefix){
         this.name = name;
         this.code = code;
         this.prefix = prefix;
         int note = 0;
+        int verbalNote = 0;
     }
 
     void addTeacher(Teacher teacher){   // Bu metot benim dışardan aldığım teacher nesnemi, içerdeki teacher nesneme atayacak.
@@ -28,8 +30,4 @@ public class Course {
     void printTeacher(){
         this.teacher.print();
     }
-
-
-
-
 }

@@ -22,22 +22,25 @@ public class Student {      //avarage: ortalama, isPass: dersi geçip geçmediğ
         this.isPass = false;
     }
 
-    void addBulkExamNote(int note1, int note2, int note3){           //Bulk: toplu   --> toplu sınav notu ekleme metodu
+    void addBulkExamNote(int note1, int note2, int note3, int verbalNote1, int verbalNote2, int verbalNote3){           //Bulk: toplu   --> toplu sınav notu ekleme metodu
 
         if (note1 >= 0 && note1 <= 100 ){
-            this.c1.note = note1;
+            this.c1.note = note1 ;
+            this.c1.verbalNote = verbalNote1;
         }
         if (note2 >= 0 && note2 <= 100){
             this.c2.note = note2;
+            this.c2.verbalNote = verbalNote2;
         }
         if (note3 >= 0 && note3 <= 100){
             this.c3.note = note3;
+            this.c3.verbalNote = verbalNote3;
         }
     }
-
     void isPass(){
         System.out.println("============");
-        this.avarage = (this.c1.note + this.c2.note + this.c3.note ) / 3.0;
+        this.avarage = ((((this.c1.note)*0.80 + (this.c1.verbalNote)*0.20 ) + ((this.c2.note)*0.80 + (this.c2.verbalNote)*0.20 ) + ((this.c3.note)*0.80 + (this.c3.verbalNote)*0.20 ) ) / 3.0 );
+
         if (this.avarage >= 45 ){
             System.out.println("Sınıfı başarılı bir şekilde geçtiniz! ");
             this.isPass = true;
@@ -49,14 +52,11 @@ public class Student {      //avarage: ortalama, isPass: dersi geçip geçmediğ
         }
         printNote();
     }
-
     void printNote(){
         System.out.println("============");
-        System.out.println(this.c1.name + " Notu: " + this.c1.note);
-        System.out.println(this.c2.name + " Notu: " + this.c2.note);
-        System.out.println(this.c3.name + " Notu: " + this.c3.note);
+        System.out.println(this.c1.name + " Sınav Notu: " + this.c1.note + " Sözlü Notu: " + this.c1.verbalNote);
+        System.out.println(this.c2.name + " Sınav Notu: " + this.c2.note + " Sözlü Notu: " + this.c2.verbalNote);
+        System.out.println(this.c3.name + " Sınav Notu: " + this.c3.note + " Sözlü Notu: " + this.c3.verbalNote);
         System.out.println("Ortalamanız: " + this.avarage);
     }
-
-
 }

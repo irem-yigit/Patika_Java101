@@ -19,13 +19,12 @@ public class Main {
         biyo.addTeacher(t3);
 
         Student s1 = new Student("İnek Şaban","123","4",tarih,fizik,biyo);
-        s1.addBulkExamNote(100,78,50);
+        s1.addBulkExamNote(100,78,50,90,80,100);
         s1.isPass();
 
         Student s2 = new Student("Güdük Necmi ","444","4",tarih,fizik,biyo);
-        s2.addBulkExamNote(50,30,70);
+        s2.addBulkExamNote(50,30,70,90,80,100);
         s2.isPass();
-
 
     }
 }

@@ -18,8 +18,4 @@ public class Teacher {        // phoneNo: Telefon numarası, branch: bölümü
         System.out.println("Telefonu: " + this.phoneNo);
         System.out.println("Bölümü: " + this.branch);
     }
-
-
-
-
 }
