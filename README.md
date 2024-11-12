@@ -1,2 +1,2 @@
 # Patika_Java101
-Patika.dev platformundaki Java101 kursu projelerini içerir. 
+Contains Java101 course projects at Patika.dev academy.
